@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macintosh OS 1984</title>
+    <link rel="stylesheet" a href="./styles.css">
+    <script src="https://kit.fontawesome.com/9f5c3c4e92.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
+
+</head>
+<style>
+    @font-face {
+        font-family: 'FA Sysfont C';
+        src: url("sysfont/sysfont.otf");
+    }
+</style>
+<body>
+    <nav class ="navbar">
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <i id="appleButton" class="fa-brands fa-apple"></i>
+            </li>            
+            <li class="navbar__item">File</li>
+            <li class="navbar__item">Edit</li>
+            <li class="navbar__item">View</li>
+            <li class="navbar__item">Special</li>
+        </ul>
+    </nav>
+
+    <div class="time">
+        <p class="time__text" id="timestamp"></p>
+    </div>
+
+    <div class="desktop">
+        <p >Welcome to macintosh.</p>
+
+        <p id="text"></p>
+
+        
+        
+        <!-- <div class="desktop__icon">
+            <i class="fa-regular fa-floppy-disk fa-2xl"></i>
+        </div>
+        
+        <div class="hidden" id="div">
+            <i class="fa-regular fa-floppy-disk fa-2xl"></i>
+        </div> -->
+        
+        <div class="dropdown hidden" id="appleDropdown">
+            <div class="dropdown__top">
+                <ul class="dropdown__menu">
+                    <li class="dropdown__item">About the Finder...</li>
+                </ul>
+            </div>
+            <div class="dropdown__bottom">
+                <ul class="dropdown__menu">
+                    <li class="dropdown__item">Alarm Clock</li>
+                    <li class="dropdown__item">Battery</li>
+                    <li class="dropdown__item">Calculator</li>
+                    <li class="dropdown__item">Chooser</li>
+                    <li class="dropdown__item">Control Panel</li>
+                    <li class="dropdown__item">Find File</li>
+                    <li class="dropdown__item">Key Caps</li>
+                    <li class="dropdown__item">Scrapbook</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div id="systemDriveAppButton" class="desktop__app desktop__app--drive">
+            <img class="desktop__app__img" src="./mac-disk.png">
+            <div class="desktop__app__text">Mac OS 1.1</div>
+        </div>
+
+        <div id="macPaintAppButton" class="desktop__app desktop__app--paint" id="div">
+            <img class="desktop__app__img" src="./mac-disk.png">
+            <div class="desktop__app__text">MacPaint</div>
+        </div>
+
+        <div id="memoFileButton" class="desktop__app desktop__app--write" id="div">
+            <img class="desktop__app__img" src="./sample-memo-file.png">
+            <div class="desktop__app__text">memo</div>
+        </div>
+
+        <div class="desktop__app desktop__app--paint-file" id="woodcutFileButton">
+            <img class="desktop__app__img" src="./paint-file.png">
+            <div class="desktop__app__text">woodcut</div>
+        </div>
+
+
+        <div class="desktop__app desktop__app--trash" id="div">
+            <img class="desktop__app__img" src="./trashmac.png">
+            <div class="desktop__app__text">Trash</div>
+        </div>
+
+       
+        
+        <div class="box box__system hidden" id="systemDriveModal">
+            <div class="box__header">
+                <div class="box__header__background">
+                    <div class="box__header__text">System Folder</div>
+                </div>
+                <div class="box__header__close" id="closeButton">
+                    <img class="box__header__close__icon" src="./closeicon.png">
+                </div>
+            </div>
+            <div class="box__desc">
+                <div class="box__desc__text">6 items</div>
+                <div class="box__desc__text">152K in folder</div>
+                <div class="box__desc__text">167K available</div>
+            </div>
+            <div class="box__main">
+                <div class="box__app" id="div">
+                    <img class="box__app__img" src="./file.png">
+                    <div class="box__app__text">Finder</div>
+                </div>
+                <div class="box__app" id="div">
+                    <img class="box__app__img" src="./file.png">
+                    <div class="box__app__text">System</div>
+                </div>
+                <div class="box__app" id="div">
+                    <img class="box__app__img" src="./file.png">
+                    <div class="box__app__text">Clipboard File</div>
+                </div>
+                <div class="box__app" id="div">
+                    <img class="box__app__img" src="./file.png">
+                    <div class="box__app__text">Scrapboard File</div>
+                </div>
+                <div class="box__app" id="div">
+                    <img class="box__app__img" src="./file.png">
+                    <div class="box__app__text">Clipboard</div>
+                </div>
+                <div class="box__app" id="div">
+                    <img class="box__app__img" src="./file.png">
+                    <div class="box__app__text">Imagewriter</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="box box__paint hidden" id="macPaintAppModal">
+            <div class="box__header">
+                <div class="box__header__background">
+                    <div class="box__header__text">MacPaint Folder</div>
+                </div>
+                <div class="box__header__close">
+                    <img class="box__header__close__icon" src="./closeicon.png">
+                </div>
+            </div>
+            <div class="box__desc">
+                <div class="box__desc__text">2 items</div>
+                <div class="box__desc__text">65K in folder</div>
+                <div class="box__desc__text">330K available</div>
+            </div>
+            <div class="box__main">
+                <div class="box__app" id="div">
+                    <img class="box__app__img" src="./file.png">
+                    <div class="box__app__text">MacPaint 1.4</div>
+                </div>
+                <div class="box__app" id="div">
+                    <img class="box__app__img" src="./file.png">
+                    <div class="box__app__text">hello</div>
+                </div>
+                </div>
+            </div>
+
+            
+            <div class="box box__geisha hidden" id="woodcutModal">
+                <div class="box__header">
+                    <div class="box__header__background">
+                        <div class="box__header__text">Woodcut</div>
+                    </div>
+                    <div class="box__header__close">
+                        <img class="box__header__close__icon" src="./closeicon.png">
+                    </div>
+                </div>
+                <div>
+                    <img src="./04_applegeisha.gif">
+                </div>
+            </div>
+
+            <div class="box box__memo hidden" id="memoModal">
+                <div class="box__header">
+                    <div class="box__header__background">
+                        <div class="box__header__text"> memo</div>
+                    </div>
+                    <div class="box__header__close">
+                        <img class="box__header__close__icon" src="./closeicon.png">
+                    </div>
+                </div>
+                <div>
+                    <img src="./macwrite-file-memo.jpeg">
+                </div>
+            </div>
+    
+    
+            
+        </div>
+
+    </div>
+</body>
+
+
+</html>

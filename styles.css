@@ -1,0 +1,243 @@
+@font-face {
+  font-family: "FA Sysfont C";
+  src: url("fa-sysfont-c.woff2") format("woff2"), url("fa-sysfont-c.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-size: 12px;
+  font-family: "FA Sysfont C";
+  color: black;
+  background-color: lightgrey;
+  background: conic-gradient(#000 90deg, #fff 0, #fff 180deg, #000 0, #000 270deg, #fff 0);
+  background-size: 2px 2px;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(./macicons.jpeg);
+  overflow: hidden;
+}
+.icon__save {
+  background-position: 180px 100px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.navbar {
+  padding: 0px;
+  margin: 0px;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: 9999;
+  width: 100%;
+  height: 25px;
+  background-color: white;
+}
+.navbar__menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0px;
+  margin: 5px;
+  align-items: center;
+}
+.navbar__item {
+  margin-right: 20px;
+  padding: 1px;
+}
+.navbar__item:hover {
+  background-color: black;
+  color: white;
+}
+
+.time {
+  position: relative;
+  background-color: white;
+  z-index: 9999;
+}
+.time__text {
+  position: absolute;
+  top: -13px;
+  right: 30px;
+}
+
+.dropdown {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+  position: absolute;
+  top: 25px;
+  left: 8.5px;
+}
+.dropdown__item:hover {
+  background-color: black;
+  color: white;
+}
+.dropdown__top {
+  margin: 0px;
+  padding: 0px;
+}
+.dropdown__bottom {
+  margin: 0px;
+  padding: 0px;
+}
+.dropdown__menu {
+  list-style-type: none;
+  margin: 0px;
+  padding: 5px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.desktop {
+  padding: 50px;
+  margin: 0px;
+}
+.desktop__app {
+  position: absolute;
+}
+.desktop__app--drive {
+  top: 40px;
+  right: 40px;
+}
+.desktop__app--paint {
+  top: 100px;
+  right: 40px;
+}
+.desktop__app--write {
+  top: 160px;
+  right: 40px;
+}
+.desktop__app--paint-file {
+  top: 220px;
+  right: 20px;
+}
+.desktop__app--trash {
+  bottom: 50px;
+  right: 50px;
+}
+.desktop__app__img {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+.desktop__app__text {
+  font-size: 10px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.box {
+  border: 1px solid black;
+  background-color: white;
+  font-size: 10px;
+  position: absolute;
+  top: 100px;
+  left: 300px;
+  width: 50%;
+}
+.box__system {
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 220px;
+}
+.box__paint {
+  position: absolute;
+  top: 300px;
+  left: 100px;
+}
+.box__header {
+  border: 1px solid black;
+  position: relative;
+  background-image: linear-gradient(to bottom, #000, #000 50%, #fff 50%, #fff);
+  background-size: 4px 4px;
+}
+.box__header__close {
+  position: absolute;
+  top: 2.5px;
+  left: 4px;
+}
+.box__header__close__icon {
+  width: 9px;
+  height: 9px;
+}
+.box__header__background {
+  height: 14px;
+  position: relative;
+  top: 50%;
+  transform: translate(0, 20%);
+}
+.box__header__text {
+  text-align: center;
+  padding: 1px;
+  margin: auto;
+  width: 30%;
+  height: 58%;
+  background-color: white;
+}
+.box__desc {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.box__desc__text {
+  text-align: center;
+}
+.box__main {
+  border: 1px solid black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.box__app {
+  padding: 15px;
+}
+.box__app__img {
+  width: 30px;
+  height: 30px;
+}
+.box__app__text {
+  text-align: center;
+  font-size: 10px;
+  background-color: white;
+}
+.box__geisha {
+  position: absolute;
+  top: 150px;
+  left: 350px;
+}
+.box__geisha img {
+  width: 100%;
+}
+.box__memo {
+  position: absolute;
+  top: 150px;
+  left: 20px;
+}
+.box__memo img {
+  width: 100%;
+}
+
+.fa-regular {
+  width: 100px;
+  height: 100px;
+}
