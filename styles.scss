@@ -142,7 +142,7 @@ body {
 
         &--write {
             top: 160px;
-            right: 50px;
+            right: 40px;
         }
 
         &--paint-file {
@@ -152,12 +152,12 @@ body {
 
         &--trash {
             bottom: 50px;
-            right: 50px;
+            right: 40px;
         }
 
         &__img {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             color: white;
         }
 
@@ -165,6 +165,7 @@ body {
             font-size: 10px;
             background-color: white;
             border: 1px solid black;
+            text-align: center;
         }
     }
 }
@@ -177,7 +178,11 @@ body {
     top: 100px;
     left: 300px;
     width: 50%;
-    
+
+    &__image {
+        margin-top: 4px;
+    }
+
     &__system {
         display: block;
         position: absolute;
@@ -195,16 +200,14 @@ body {
     &__header {
     border: 1px solid black;
     position: relative;
-    background-image: linear-gradient(to bottom, #000, #000 50%, #fff 50%, #fff);
-    background-size: 4px 4px;
 
         &__close {
             position: absolute;
             top: 2.5px;
             left: 4px;
             &__icon {
-                width: 9px;
-                height: 9px;
+                width: 12px;
+                height: 12px;
             }
         }
         &__background {
@@ -212,20 +215,23 @@ body {
             position: relative;
             top: 50%;
             transform: translate(0, 20%);
+            background-image: linear-gradient(to bottom, black, black 50%, #fff 50%, #fff);
+            background-size: 2.5px 2.5px;
         }
 
         &__text { 
             text-align: center;
             padding: 1px;
             margin: auto;
-            width: 30%;
-            height: 58%;
+            width: 15%;
+            height: 80%;
             background-color: white;
         }
     }
 
     &__desc {
         border: 1px solid black;
+        margin-top: 4px;
         &__text {
             text-align: center;
         }

@@ -126,7 +126,7 @@ body {
 }
 .desktop__app--write {
   top: 160px;
-  right: 50px;
+  right: 40px;
 }
 .desktop__app--paint-file {
   top: 220px;
@@ -134,17 +134,18 @@ body {
 }
 .desktop__app--trash {
   bottom: 50px;
-  right: 50px;
+  right: 40px;
 }
 .desktop__app__img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   color: white;
 }
 .desktop__app__text {
   font-size: 10px;
   background-color: white;
   border: 1px solid black;
+  text-align: center;
 }
 
 .box {
@@ -155,6 +156,9 @@ body {
   top: 100px;
   left: 300px;
   width: 50%;
+}
+.box__image {
+  margin-top: 4px;
 }
 .box__system {
   display: block;
@@ -170,8 +174,6 @@ body {
 .box__header {
   border: 1px solid black;
   position: relative;
-  background-image: linear-gradient(to bottom, #000, #000 50%, #fff 50%, #fff);
-  background-size: 4px 4px;
 }
 .box__header__close {
   position: absolute;
@@ -179,25 +181,28 @@ body {
   left: 4px;
 }
 .box__header__close__icon {
-  width: 9px;
-  height: 9px;
+  width: 12px;
+  height: 12px;
 }
 .box__header__background {
   height: 14px;
   position: relative;
   top: 50%;
   transform: translate(0, 20%);
+  background-image: linear-gradient(to bottom, black, black 50%, #fff 50%, #fff);
+  background-size: 2.5px 2.5px;
 }
 .box__header__text {
   text-align: center;
   padding: 1px;
   margin: auto;
-  width: 30%;
-  height: 58%;
+  width: 15%;
+  height: 80%;
   background-color: white;
 }
 .box__desc {
   border: 1px solid black;
+  margin-top: 4px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
