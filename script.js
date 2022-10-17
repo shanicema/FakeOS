@@ -30,6 +30,11 @@ const open = (element) => {
     sync();
 }
 
+const toggle = (element) => {
+    if (openElements.includes(element)) close(element);
+    else open(element);
+}
+
 const sync = () => {
     openElements.forEach((element, i) => {
         element.style.zIndex = i;
@@ -47,7 +52,7 @@ console.log(appleDropdown);
 appleButton.addEventListener("click", () => {
     console.log("clicked apple button");
     // console.log(appleDropdown.classList);
-    open(appleDropdown);
+    toggle(appleDropdown);
     // appleDropdown.classList.toggle("hidden");
 })
 
@@ -62,7 +67,6 @@ console.log(systemDrivePopup);
 
 systemDriveButton.addEventListener("click", () => {
     console.log("clicked mac system drive app");
-    // systemDrivePopup.classList.toggle("box__system--hidden");
     open(systemDrivePopup);
 })
 
@@ -82,7 +86,7 @@ Array.from(document.getElementsByClassName('box__header__close')).forEach(closeB
 
 Array.from(document.getElementsByClassName('box')).forEach(box => {
     box.addEventListener('click', (event) => {
-        if (!event.target.classList.has('box__header__close')) {
+        if (!event.target.parentElement.classList.contains('box__header__close')) {
             open(box);
         }
     })
@@ -122,29 +126,6 @@ memoButton.addEventListener("click", () => {
 })
 
 
-// icon.addEventListener("click", ()=> {
-//     console.log("clicked");
-//     const text = document.getElementById("text");
-//     text.innerText = "You clicked me";
-//     text.className
-// } )
-
-// icon.addEventListener("click", ()=> {
-//     console.log("clicked");
-//     const div = document.getElementById("div");
-//     console.log(div.classList);
-//     div.classList.toggle("hidden")
-   
-// } )
-
-// 1) select the element
-// 2) add the event listener e.g. "clicked", onhover
-// 3) add in your function which will be executed when event occurs
-
-
-// const time = document.querySelector("#timestamp");
-// console.log(time);
-
 const datetime = new Date().toLocaleString();
 console.log(datetime);
 document.getElementById("timestamp").textContent = datetime; 
@@ -167,3 +148,26 @@ const refreshTime = () => {
     timeDisplay.textContent = formattedString;
   }
     setInterval(refreshTime, 1000);
+
+    // icon.addEventListener("click", ()=> {
+//     console.log("clicked");
+//     const text = document.getElementById("text");
+//     text.innerText = "You clicked me";
+//     text.className
+// } )
+
+// icon.addEventListener("click", ()=> {
+//     console.log("clicked");
+//     const div = document.getElementById("div");
+//     console.log(div.classList);
+//     div.classList.toggle("hidden")
+   
+// } )
+
+// 1) select the element
+// 2) add the event listener e.g. "clicked", onhover
+// 3) add in your function which will be executed when event occurs
+
+
+// const time = document.querySelector("#timestamp");
+// console.log(time);

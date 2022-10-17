@@ -120,6 +120,11 @@ body {
 .desktop {
     padding: 50px;
     margin: 0px;
+    &__subtext {
+        position: absolute;
+        top: 30px;
+        left: 10px;
+    }
 
     &__app {
         position: absolute;
@@ -137,12 +142,12 @@ body {
 
         &--write {
             top: 160px;
-            right: 40px;
+            right: 50px;
         }
 
         &--paint-file {
             top: 220px;
-            right: 20px;
+            right: 40px;
         }
 
         &--trash {

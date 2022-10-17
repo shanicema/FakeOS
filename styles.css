@@ -108,6 +108,11 @@ body {
   padding: 50px;
   margin: 0px;
 }
+.desktop__subtext {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+}
 .desktop__app {
   position: absolute;
 }
@@ -121,11 +126,11 @@ body {
 }
 .desktop__app--write {
   top: 160px;
-  right: 40px;
+  right: 50px;
 }
 .desktop__app--paint-file {
   top: 220px;
-  right: 20px;
+  right: 40px;
 }
 .desktop__app--trash {
   bottom: 50px;
