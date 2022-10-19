@@ -25,8 +25,6 @@ const open = (element) => {
 
     element.classList.remove('hidden');
 
-    console.log(openElements);
-
     sync();
 }
 
@@ -78,19 +76,31 @@ console.log(macPaintButton);
 const macPaintFolderPopup = document.getElementById("macPaintAppModal");
 console.log(macPaintFolderPopup);
 
-Array.from(document.getElementsByClassName('box__header__close')).forEach(closeButton => {
-    closeButton.addEventListener('click', () => {
-        close(closeButton.parentElement.parentElement);
+
+Array.from(document.getElementsByClassName('box')).forEach(box => {
+    box.addEventListener('click', () => open(box))
+    box.querySelector('.box__header__close').addEventListener('click', (event) => {
+        event.stopPropagation();
+        close(box);
     })
 });
 
-Array.from(document.getElementsByClassName('box')).forEach(box => {
-    box.addEventListener('click', (event) => {
-        if (!event.target.parentElement.classList.contains('box__header__close')) {
-            open(box);
-        }
-    })
-});
+
+//Alternate way 1:
+// Array.from(document.getElementsByClassName('box')).forEach(box => {
+//     box.addEventListener('click', (event) => {
+//         if (event.target.parentElement.classList.contains
+//             ('box__header__close')) {
+//             // if the element that I clicked 's - parent div - does not contain the class 'box__header__close'
+//             // then open box     
+//             close(box);
+//         } else {
+//             open(box);
+//         }
+//     })
+// });
+
+
 
 macPaintButton.addEventListener("click", () => {
     console.log("clicked macPaint folder app");
